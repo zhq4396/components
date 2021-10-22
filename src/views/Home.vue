@@ -1,18 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PickerColumns
+      v-model="data.company_type"
+      label="产业类别"
+      placeholder="请输入"
+      :rules="[{ required: true }]"
+      required
+    />
+    <div class="s">22</div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PickerColumns from "./compontents/picker_columns.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    PickerColumns,
+  },
+  data() {
+    return {
+      data: {
+        company_type: "",
+      },
+    };
+  },
+};
 </script>
+<style scoped>
+.s {
+  height: 100px;
+  width: 300px;
+  background-color: #eee;
+}
+</style>
