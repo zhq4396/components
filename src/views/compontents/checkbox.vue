@@ -39,8 +39,9 @@ export default {
 }
 .checkbox {
   padding: 10px 10px;
-  width: 40px;
+  width: 60px;
   border: 1px solid #eee;
+  box-sizing: border-box;
   text-align: center;
   color: #333;
 }

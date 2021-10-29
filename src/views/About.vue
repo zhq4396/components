@@ -35,7 +35,7 @@ export default {
         "111s",
         "121",
       ],
-      listData: [1, 2],
+      listData: [],
     };
   },
   created() {
