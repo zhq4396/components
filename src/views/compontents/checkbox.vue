@@ -1,0 +1,54 @@
+<template>
+  <div @click="handleClick" class="check">
+    <div class="checkbox" :class="isCheked ? 'active' : ''">
+      {{ label }}
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    label: {
+      type: String,
+    },
+    name: {
+      type: [Number, String],
+    },
+  },
+  data() {
+    return {
+      isCheked: this.$parent.value.indexOf(this.name) > -1 ? true : false,
+    };
+  },
+  methods: {
+    handleClick() {
+      this.isCheked = !this.isCheked;
+      if (this.isCheked) {
+        this.$parent.$emit("pushItem", this.name);
+      } else {
+        this.$parent.$emit("removeItem", this.name);
+      }
+    },
+  },
+};
+</script>
+<style scoped>
+.check{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.checkbox {
+  padding: 10px 0;
+  width: 40px;
+  border: 1px solid #eee;
+  text-align: center;
+  color: #333;
+}
+.active {
+  background-color: rgb(89, 137, 226);
+  color: #fff;
+  border: 1px solid rgb(89, 137, 226);
+}
+</style>
