@@ -8,8 +8,8 @@
         :label="item"
       ></checkbox>
     </checkbox-group>
-    <pop v-model="show" :bottom="true" height="40%">sdds11111111111</pop>
-    <van-cell is-link @click="showPopup">展示弹出层</van-cell>
+    <!-- <pop v-model="show" :bottom="true" height="40%">sdds11111111111</pop> -->
+    <!-- <van-cell is-link @click="showPopup">展示弹出层</van-cell> -->
   </div>
 </template>
 
@@ -24,19 +24,22 @@ export default {
     return {
       show: false,
       data: [
-        "11",
-        "11",
-        "121212",
-        "121212",
-        "121212",
-        "121212",
-        "121212",
-        "121212",
-        "121212",
-        "121212",
+        "1001",
+        "1100",
+        "100",
+        "230",
+        "123",
+        "203",
+        "12",
+        "111",
+        "111s",
+        "121",
       ],
-      listData: [],
+      listData: [1, 2],
     };
+  },
+  created() {
+    console.log(this.data);
   },
   methods: {
     showPopup() {
