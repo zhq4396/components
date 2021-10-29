@@ -34,13 +34,11 @@ export default {
 };
 </script>
 <style scoped>
-.check{
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
+.check {
+  margin: 10px 10px 0;
 }
 .checkbox {
-  padding: 10px 0;
+  padding: 10px 10px;
   width: 40px;
   border: 1px solid #eee;
   text-align: center;

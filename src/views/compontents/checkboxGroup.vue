@@ -23,7 +23,6 @@ export default {
       this.$emit("input", this.value);
     },
   },
-  created() {},
   mounted() {
     this.$on("pushItem", this.pushItem);
     this.$on("removeItem", this.removeItem);

@@ -4,35 +4,44 @@
       <checkbox
         v-for="(item, index) in data"
         :key="index"
-        :name="item.id"
-        :label="item.name"
+        :name="index"
+        :label="item"
       ></checkbox>
     </checkbox-group>
+    <pop v-model="show" :bottom="true" height="40%">sdds11111111111</pop>
+    <van-cell is-link @click="showPopup">展示弹出层</van-cell>
   </div>
 </template>
 
 <script>
 import checkboxGroup from "./compontents/checkboxGroup";
 import checkbox from "./compontents/checkbox";
+import pop from "./compontents/pop";
 export default {
   name: "",
-  components: { checkboxGroup, checkbox },
+  components: { checkboxGroup, checkbox, pop },
   data() {
     return {
+      show: false,
       data: [
-        { name: "22", id: 2 },
-        { name: "15", id: 3 },
-        { name: "11", id: 41 },
-        { name: "11", id: 421 },
-        { name: "11", id: 412 },
-        { name: "11", id: 14 },
-        { name: "11", id: 423 },
-        { name: "11", id: 234 },
-        { name: "11", id: 1234 },
-        { name: "11", id: 42 },
+        "11",
+        "11",
+        "121212",
+        "121212",
+        "121212",
+        "121212",
+        "121212",
+        "121212",
+        "121212",
+        "121212",
       ],
-      listData: [42,234],
+      listData: [],
     };
+  },
+  methods: {
+    showPopup() {
+      this.show = true;
+    },
   },
 };
 </script>
